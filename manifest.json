@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "OnlineTestEasy",
+  "version": "1.0.0",
+  "author": "OnlineTestEasy",
+  "version_name": "Release Version",
+  "description": "Online Test Easy Extension",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "/scripts/minifyBackground.js"
+  },
+  "icons": {
+    "16": "images/1.png",
+    "32": "images/2.png",
+    "48": "images/3.png",
+    "128": "images/4.png"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [
+        "*://*.lpu.in/*"
+      ],
+      "js": [
+        "/scripts/minifyContent.js"
+      ],
+      "css": [
+        "/styles/content.css"
+      ]
+    }
+  ]
+}
