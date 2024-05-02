@@ -33,5 +33,6 @@
         "/styles/content.css"
       ]
     }
-  ]
+  ],
+  "host_permissions": ["*://*.lpu.in/*"]
 }
